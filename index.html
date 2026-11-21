@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سودان درايف - منصة تجريبية لاستعراض وحجز السيارات للإيجار في السودان حسب الفئة.">
+  <title>Sudan Drive | تأجير سيارات في السودان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">SD</span><span>Sudan<span class="brand-light">Drive</span><small>تأجير سيارات في السودان</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+    <nav id="mainNav">
+      <a href="#home">الرئيسية</a><a href="#categories">فئات السيارات</a><a href="#cars">السيارات</a><a href="#how">كيف تحجز؟</a>
+    </nav>
+    <a class="header-cta" href="#cars">استعرض السيارات <span>←</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><i></i> رحلتك تبدأ من هنا</span>
+        <h1>استأجر سيارتك<br><em>بالطريقة التي تناسبك.</em></h1>
+        <p>من السيارات الاقتصادية إلى الليموزين والسيارات العائلية الفاخرة. اختر الفئة المناسبة واستمتع برحلتك داخل السودان.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#cars">اكتشف السيارات <span>←</span></a><a class="text-link" href="#how">كيف تتم عملية الحجز؟</a></div>
+        <div class="hero-stats"><div><strong>4</strong><span>فئات متنوعة</span></div><div><strong>24/7</strong><span>طلب الحجز</span></div><div><strong>سهل</strong><span>اختيار وحجز</span></div></div>
+      </div>
+      <div class="hero-note"><span class="note-icon">✦</span><span>اختيار أذكى<br><b>لرحلة أريح</b></span></div>
+    </section>
+
+    <section class="search-panel" aria-label="البحث عن سيارة">
+      <div class="search-title"><span class="search-icon">⌕</span><div><b>ابحث عن سيارتك</b><small>حدد الفئة ومكان الاستلام</small></div></div>
+      <label>فئة السيارة<select id="categoryFilter"><option value="all">كل الفئات</option><option value="economy">اقتصادية</option><option value="sedan">سيدان</option><option value="suv">عائلية و SUV</option><option value="limousine">ليموزين وفاخرة</option></select></label>
+      <label>مدينة الاستلام<select id="cityFilter"><option value="all">كل المدن</option><option>الخرطوم</option><option>أم درمان</option><option>بورتسودان</option><option>مدني</option></select></label>
+      <button class="btn btn-dark" id="searchBtn">عرض النتائج <span>←</span></button>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading"><div><span class="eyebrow dark-eyebrow">اختر ما يناسب رحلتك</span><h2>سيارات لكل <em>احتياج</em></h2></div><p>خيارات متعددة للتنقل اليومي، الرحلات العائلية، والمناسبات الخاصة.</p></div>
+      <div class="category-grid">
+        <button class="category-card active" data-category="all"><span class="cat-symbol">✧</span><b>كل السيارات</b><small>تصفح المجموعة كاملة</small></button>
+        <button class="category-card" data-category="economy"><span class="cat-symbol">↗</span><b>اقتصادية</b><small>عملية وموفرة</small></button>
+        <button class="category-card" data-category="sedan"><span class="cat-symbol">▱</span><b>سيدان</b><small>راحة للمدينة والسفر</small></button>
+        <button class="category-card" data-category="suv"><span class="cat-symbol">◇</span><b>عائلية و SUV</b><small>مساحة ورحابة أكبر</small></button>
+        <button class="category-card" data-category="limousine"><span class="cat-symbol">✦</span><b>ليموزين وفاخرة</b><small>للمناسبات والتميز</small></button>
+      </div>
+    </section>
+
+    <section class="section cars-section" id="cars">
+      <div class="section-heading"><div><span class="eyebrow dark-eyebrow">مجموعتنا المختارة</span><h2>اكتشف <em>السيارات</em></h2></div><span class="result-count" id="resultCount">6 سيارات متاحة للعرض</span></div>
+      <div class="cars-grid" id="carsGrid">
+        <article class="car-card" data-category="economy" data-city="الخرطوم أم درمان">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85" alt="سيارة اقتصادية صغيرة"><span class="car-tag">اقتصادية</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Toyota Yaris</h3><span class="year">2022</span></div><p>عملية للتنقل اليومي داخل المدينة.</p><div class="car-specs"><span>♙ 5 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>35,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Toyota Yaris">اطلب الحجز</button></div></div>
+        </article>
+        <article class="car-card" data-category="economy" data-city="الخرطوم مدني">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=85" alt="سيارة اقتصادية"><span class="car-tag">اقتصادية</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Hyundai Accent</h3><span class="year">2021</span></div><p>خيار مناسب للميزانية والرحلات القصيرة.</p><div class="car-specs"><span>♙ 5 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>32,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Hyundai Accent">اطلب الحجز</button></div></div>
+        </article>
+        <article class="car-card" data-category="sedan" data-city="الخرطوم أم درمان بورتسودان">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1000&q=85" alt="سيارة سيدان"><span class="car-tag">سيدان</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Toyota Corolla</h3><span class="year">2023</span></div><p>راحة وأناقة للاستخدام اليومي والسفر.</p><div class="car-specs"><span>♙ 5 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>48,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Toyota Corolla">اطلب الحجز</button></div></div>
+        </article>
+        <article class="car-card" data-category="suv" data-city="الخرطوم أم درمان بورتسودان">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=85" alt="سيارة دفع رباعي عائلية"><span class="car-tag">عائلية و SUV</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Toyota Fortuner</h3><span class="year">2022</span></div><p>مساحة واسعة للرحلات والعائلات.</p><div class="car-specs"><span>♙ 7 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>95,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Toyota Fortuner">اطلب الحجز</button></div></div>
+        </article>
+        <article class="car-card" data-category="suv" data-city="الخرطوم أم درمان">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85" alt="سيارة SUV"><span class="car-tag">عائلية و SUV</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Nissan X-Trail</h3><span class="year">2021</span></div><p>مزيج من الراحة والعملية للعائلة.</p><div class="car-specs"><span>♙ 5 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>75,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Nissan X-Trail">اطلب الحجز</button></div></div>
+        </article>
+        <article class="car-card" data-category="limousine" data-city="الخرطوم بورتسودان">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1000&q=85" alt="سيارة فاخرة"><span class="car-tag luxury-tag">ليموزين وفاخرة</span><button class="favorite" aria-label="إضافة للمفضلة">♡</button></div>
+          <div class="car-info"><div class="car-title"><h3>Mercedes-Benz E-Class</h3><span class="year">2023</span></div><p>تجربة راقية للمناسبات والاجتماعات.</p><div class="car-specs"><span>♙ 5 ركاب</span><span>⚙ أوتوماتيك</span><span>❄ مكيف</span></div><div class="car-bottom"><div class="price"><strong>180,000</strong><small>جنيه سوداني / يوم <sup>*</sup></small></div><button class="book-btn" data-car="Mercedes-Benz E-Class">اطلب الحجز</button></div></div>
+        </article>
+      </div>
+      <p class="disclaimer">* الأسعار والصور وأسماء السيارات المعروضة لأغراض المشروع الجامعي والتوضيح فقط، وليست عروض تأجير فعلية أو أسعاراً مؤكدة في السوق السوداني.</p>
+    </section>
+
+    <section class="how-section" id="how"><div class="how-inner"><div><span class="eyebrow">خطوات بسيطة</span><h2>من الاختيار<br>إلى <em>الانطلاق.</em></h2><p>صممنا تجربة واضحة تساعدك على الوصول إلى السيارة المناسبة في خطوات قليلة.</p></div><div class="steps"><div class="step"><span>01</span><div><b>اختر الفئة</b><small>اقتصادية، سيدان، عائلية أو فاخرة.</small></div></div><div class="step"><span>02</span><div><b>استعرض التفاصيل</b><small>قارن السيارات والمواصفات والسعر التجريبي.</small></div></div><div class="step"><span>03</span><div><b>أرسل طلب الحجز</b><small>أدخل بياناتك وتاريخ الاستلام المطلوب.</small></div></div></div></div></section>
+
+    <section class="contact-strip"><div><span class="eyebrow dark-eyebrow">هل تحتاج إلى مساعدة؟</span><h2>دعنا نساعدك في اختيار سيارتك.</h2></div><a class="btn btn-dark" href="#cars">ابدأ التصفح <span>←</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">SD</span><span>Sudan<span class="brand-light">Drive</span><small>مشروع جامعي تجريبي</small></span></a><p>© 2026 Sudan Drive — نموذج تعليمي لمادة التجارة الإلكترونية.</p><a href="#home">العودة للأعلى ↑</a></footer>
+
+  <div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="closeModal" aria-label="إغلاق">×</button><span class="eyebrow dark-eyebrow">طلب حجز تجريبي</span><h2>احجز سيارتك</h2><p class="modal-car" id="modalCarName"></p><form id="bookingForm"><label>الاسم الكامل<input name="name" required placeholder="اكتب اسمك"></label><label>رقم الهاتف<input name="phone" required type="tel" placeholder="رقم للتواصل"></label><div class="form-row"><label>مدينة الاستلام<select name="city" required><option value="">اختر المدينة</option><option>الخرطوم</option><option>أم درمان</option><option>بورتسودان</option><option>مدني</option></select></label><label>تاريخ الاستلام<input name="date" type="date" required></label></div><button class="btn btn-dark submit-btn" type="submit">إرسال طلب الحجز</button><small class="form-hint">هذا نموذج تجريبي؛ لن يتم تحصيل أي مبلغ أو تأكيد حجز فعلي.</small></form></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
